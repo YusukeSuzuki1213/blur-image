@@ -1,1 +1,2 @@
 # blur-image
+Using imageMagic
