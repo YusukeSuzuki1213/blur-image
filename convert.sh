@@ -23,7 +23,7 @@ done
 
 # mkdir
 ORIGINAL_DIR=${DIR%/}/original
-mkdir $ORIGINAL_DIR
+mkdir -p $ORIGINAL_DIR
 
 # blur
 for file in `\find $DIR -maxdepth 1 -name *.jpg -o -name *.jpeg -o -name *.jpe`
