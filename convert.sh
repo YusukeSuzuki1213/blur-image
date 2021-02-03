@@ -22,12 +22,11 @@ do
 done
 
 # mkdir
-ORIGINAL_DIR=${DIR%/}/original
-mkdir -p $ORIGINAL_DIR
+OUTPUT_DIR=${DIR%/}/output
+mkdir -p $OUTPUT_DIR
 
 # blur
 for file in `\find $DIR -maxdepth 1 -name *.jpg -o -name *.jpeg -o -name *.jpe`
 do
-    cp $file $ORIGINAL_DIR
-    convert $file -blur $BLUR $file
+    convert $file -blur $BLUR ${OUTPUT_DIR}/${file##*/}
 done
